@@ -29,6 +29,23 @@
 <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
 
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" rel="stylesheet" />
+
+
+<style type="text/css">
+	
+ .cardingeffect:hover
+            {
+                background-color: #f49430;
+            }
+
+  .slick-prev:before, .slick-next:before {
+            color: red;
+        }
+</style>
+
+
 </head>
 	<body>
 		<div class="boxed blog">
@@ -108,13 +125,13 @@
         	<h2 class="title" style="text-align: center;">Services</h2><br><br>
                 <div class="row">
                     <div class="col-sm-4">
-                          <div class="cards" style="background-color: #f49430;">
+                          <div class="cards cardingeffect" >
                                 <div class="cards-image">
-                                  <img src="images/camp.png">
+                                   <img src="images/service7.jpeg" style="margin:28px;width:300px;height:200px;">
                                 </div>
 
                                 <div class="cards-box">
-                                  <h1 class="cards-title" style="color: white;">Outdoor Signs</h1>
+                                  <h1 class="cards-title" style="color: black;">Outdoor Signs</h1>
                                     <br>
                                   <div class="cards-content">
                                     <p style="color: white;">
@@ -130,9 +147,9 @@
                               </div>
                     </div>
                     <div class="col-sm-4">
-                          <div class="cards">
+                          <div class="cards cardingeffect">
                                 <div class="cards-image">
-                                  <img src="images/airport.png">
+                                    <img src="images/info8.jpeg" style="margin:28px;width:300px;height:200px;" >
                                 </div>
 
                                 <div class="cards-box">
@@ -147,9 +164,9 @@
                               </div>
                     </div>
                     <div class="col-sm-4">
-                          <div class="cards">
+                          <div class="cards cardingeffect">
                                 <div class="cards-image">
-                                  <img src="images/fab.png">
+                                  <img src="images/unit6.jpeg" style="margin:28px;width:300px;height:200px;">
                                 </div>
 
                                 <div class="cards-box">
@@ -180,7 +197,30 @@
     		<br><br>
 
     	<div class="row">
-    		
+
+
+    		                  <div class="slider babag">
+                                    
+                                            <div>
+                                             <img  src="images/service1.jpeg"  width="250px" height="250px"/>
+                                            </div>
+                                    
+                                           <div>
+                                            <img src="images/service2.jpeg"   width="250px" height="250px" />
+                                           </div>
+                                        
+                                           <div>
+                                            <img src="images/service3.jpg"  width="250px" height="250px" />
+                                          </div>
+                                        
+                                           <div>
+                                            <img src="images/service4.jpg"  width="250px" height="250px" />
+                                          </div>
+                                        
+                                          
+                                 
+                          </div>
+    		<br><br><br><br>
     		<div class="col-sm-3">
     			<img src="images/service1.jpeg">
     		</div>
@@ -1019,7 +1059,128 @@
     <script type="text/javascript" src="javascript/jquery.cookie.js"></script>
     <script type="text/javascript" src="javascript/waypoints.min.js"></script>
     <script type="text/javascript" src="javascript/main.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 	<!-- End Javascript -->
+
+	  <script>
+    $(document).ready(function () {
+       
+
+
+$('.babag').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    }
+  ]
+});
+
+// services 
+
+/*$('.responsive2').slick({
+  dots: true,
+  infinite: true,
+  speed: 50,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});*/
+
+
+/*
+// f-16 services 
+
+$('.responsive3').slick({
+  dots: true,
+  infinite: true,
+  speed: 50,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});*/
+
+
+});
+
+</script>
 
 	</body>
 </html>
